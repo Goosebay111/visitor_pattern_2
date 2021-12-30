@@ -47,6 +47,7 @@ class Body implements BodyPart {
   }
 }
 
+//operation 1
 class BodyPartStitchVisitor implements BodyPartVisitor {
   void visit(BodyPart bodyPart) {
     if (bodyPart is Body) {
@@ -64,6 +65,7 @@ class BodyPartStitchVisitor implements BodyPartVisitor {
   }
 }
 
+//operation 2
 class BodyPartProdVisitor implements BodyPartVisitor {
   void visit(BodyPart bodyPart) {
     if (bodyPart is Body) {
@@ -83,7 +85,9 @@ class BodyPartProdVisitor implements BodyPartVisitor {
 
 void main() {
   var body = Body();
+  //operation 1
   body.accept(BodyPartStitchVisitor());
+  //operation 2
   body.accept(BodyPartProdVisitor());
 
   /*
