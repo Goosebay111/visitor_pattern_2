@@ -1,3 +1,5 @@
+// Visitor
+
 abstract class BodyPart {
   late String name;
   void accept(BodyPartVisitor visitor) => visitor.visit(this);
